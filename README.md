@@ -1,8 +1,8 @@
-# Tasklist
-Simple Tastklist app - Silex / Doctrine / Bootstrap
+# Tasklist API
+Simple Tastklist api - Silex / Doctrine
 
 ## API RESTFUL RODANDO EM ##
-http://tasklist.gebender.com.br
+http://tasklist-api.gebender.com.br
 
 ### Instalação ###
 * Clone este repo
@@ -33,7 +33,8 @@ GET > http://tasklist.gebender.com.br/tasks/1
 
 ##### Para inserir #####
 POST > http://tasklist.gebender.com.br/tasks
-`# Body raw
+
+`Body raw:
 {
 	"ordem":"2",
 	"titulo":"Nova task",
@@ -44,7 +45,7 @@ POST > http://tasklist.gebender.com.br/tasks
 
 ##### Para editar #####
 PUT > http://tasklist.gebender.com.br/tasks/1
-`# Body raw
+`Body raw:
 {
 	"ordem":"50",
 	"titulo":"task editada, nova ordem"

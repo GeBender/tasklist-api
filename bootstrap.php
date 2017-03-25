@@ -72,6 +72,14 @@ $app['Templating'] = function () {
 
 // ROTAS //
 
+
+// Raiz, emula a lista
+$app->get('/', function () use($app) {
+	$AppController = new App\Controller\AppController($app);
+	return $AppController->home();
+});
+
+
 // Lista as tasks
 $app->get('/tasks', function () use($app) {
 	return $app['taskControl']->listar();
