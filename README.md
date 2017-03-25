@@ -11,8 +11,8 @@ http://tasklist.gebender.com.br
 `composer install`
 
 * Crie um banco de dados
-* Configure o banco em /App/Config
-* Crie o banco via Doctrine:
+* Configure o banco em /App/Config.php
+* Persista o banco via Doctrine:
 
 `cd App`
 
