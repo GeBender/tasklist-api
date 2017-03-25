@@ -2,28 +2,34 @@
 Simple Tastklist app - Silex / Doctrine / Bootstrap
 
 ## API RESTFUL RODANDO EM ##
-http://gebender.com.br
+http://tasklist.gebender.com.br
 
 ### Instalação ###
 * Clone este repo
 * Instale as dependências via Composer
+
 `composer install`
 
 * Crie um banco de dados
 * Configure o banco em /App/Config
 * Crie o banco via Doctrine:
+
 `cd App`
+
 `../vendor/bin/doctrine orm:schema-tool:create`
 
 
 ### Testando ###
 Utilizando o Postman ou similares:
 
+
 ##### Para listar #####
 GET > http://tasklist.gebender.com.br/tasks
 
+
 ##### Para ver um #####
 GET > http://tasklist.gebender.com.br/tasks/1
+
 
 ##### Para inserir #####
 POST > http://tasklist.gebender.com.br/tasks
@@ -35,6 +41,7 @@ POST > http://tasklist.gebender.com.br/tasks
 	"prazo":"2017-03-27"
 }`
 
+
 ##### Para editar #####
 PUT > http://tasklist.gebender.com.br/tasks/1
 `# Body raw
@@ -43,7 +50,10 @@ PUT > http://tasklist.gebender.com.br/tasks/1
 	"titulo":"task editada, nova ordem"
 }`
 
+
 ##### Para deletar #####
 DELETE > http://tasklist.gebender.com.br/tasks/1
+
+
 
 :)
