@@ -24,15 +24,15 @@ Utilizando o Postman ou similares:
 
 
 ##### Para listar #####
-GET > http://tasklist.gebender.com.br/tasks
+GET > http://tasklist-api.gebender.com.br/tasks
 
 
 ##### Para ver um #####
-GET > http://tasklist.gebender.com.br/tasks/1
+GET > http://tasklist-api.gebender.com.br/tasks/1
 
 
 ##### Para inserir #####
-POST > http://tasklist.gebender.com.br/tasks
+POST > http://tasklist-api.gebender.com.br/tasks
 
 `Body raw:
 {
@@ -44,7 +44,7 @@ POST > http://tasklist.gebender.com.br/tasks
 
 
 ##### Para editar #####
-PUT > http://tasklist.gebender.com.br/tasks/1
+PUT > http://tasklist-api.gebender.com.br/tasks/1
 `Body raw:
 {
 	"ordem":"50",
@@ -53,7 +53,7 @@ PUT > http://tasklist.gebender.com.br/tasks/1
 
 
 ##### Para deletar #####
-DELETE > http://tasklist.gebender.com.br/tasks/1
+DELETE > http://tasklist-api.gebender.com.br/tasks/1
 
 
 
