@@ -23,7 +23,7 @@ class Config
         return [
             'title' => 'The Simple Tasklist',
             'db' => 'pdo-mysql://root:mysql@localhost:3306/tasklist',
-            'apiAddress' => 'http://localhost:9090'
+            'apiAddress' => 'http://tasklist.gebender.com.br'
         ];
     }
 }

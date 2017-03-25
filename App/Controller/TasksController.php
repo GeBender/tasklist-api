@@ -12,15 +12,20 @@ namespace App\Controller;
 
 use App\DAO\TasksDAO;
 use Task;
+use Silex\Application;
 
 class TasksController extends Controller
 {
 
+	/**
+	 * @param Application $app
+	 */
 	public function __construct($app) 
 	{
 		parent::__construct($app);
 		$this->DAO = new TasksDAO('Task', $app);
 	}
+	
 	
     public function listar()
     {
@@ -32,11 +37,21 @@ class TasksController extends Controller
     	return json_encode($list);
     }
     
+    
+    /**
+     * @param int $id
+     * @return string
+     */
     public function findTask($id)
     {
     	return json_encode($this->DAO->find($id)->toArray());
     }
+ 
     
+    /**
+     * @param array $dados
+     * @return int
+     */
     public function create($dados)
     {
     	$task = new Task();
@@ -46,6 +61,12 @@ class TasksController extends Controller
     	return $newTask->id;
     }
 
+    
+    /**
+     * @param int $id
+     * @param array $dados
+     * @return array
+     */
     public function update($id, $dados)
     {
     	$task = $this->DAO->find($id);
@@ -55,12 +76,14 @@ class TasksController extends Controller
     	
     	return $task->toArray();
     }
+
     
+    /**
+     * @param int $id
+     */
     public function remove($id)
     {
     	$task = $this->DAO->find($id);
     	$this->DAO->deletar($task);
-    	
-    	return true;
     }
 }
