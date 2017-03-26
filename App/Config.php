@@ -21,7 +21,6 @@ class Config
     public static function load()
     {
         return [
-            'title' => 'The Simple Tasklist',
             'db' => 'pdo-mysql://root:mysql@localhost:3306/tasklist',
             'apiAddress' => 'http://tasklist-api.gebender.com.br'
         ];

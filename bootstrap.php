@@ -94,7 +94,7 @@ $app->get('/tasks/{id}', function ($id) use($app) {
 
 // Insere nova task
 $app->post('/tasks', function(Request $request) use ($app) {
-	$dados = json_decode($request->getContent(), true);
+	$dados = array_filter(json_decode($request->getContent(), true));
 	$id = $app['taskControl']->create($dados);
 	
 	$response = new Response('Tarefa inserida com sucesso!', 201);

@@ -57,7 +57,7 @@ class Task extends Model
     
     public function __construct()
     {
-    	$this->order = 1;
+    	$this->ordem = 1;
     	$this->cadastro = new \DateTime('now');
     	$this->status = self::NAO_INICIADA;
     }

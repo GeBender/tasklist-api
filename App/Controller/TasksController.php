@@ -56,8 +56,8 @@ class TasksController extends Controller
     {
     	$task = new Task();
     	$task->listen($dados);
-    	
     	$newTask = $this->DAO->salvar($task);
+    	
     	return $newTask->id;
     }
 
